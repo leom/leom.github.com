@@ -8,12 +8,14 @@ categories: [python, xlrd]
 Will you look at that? Firstly, there's a new [xlrd release](https://groups.google.com/group/python-excel/browse_thread/thread/54259f0e247645bc?hl=en) out!
 If you have to do Excel processing in python, it's literally the only option you've got available. Good times.
 
-The fun thing is that it supports cell notes/comments now, but as of this writing it's a little nebulous trying to figure
-out how to get to this data. Turns out it's not stored as part of the cell, but rather in `sheet.cell_note_map`. Looking at the code
-all I can say is I am extremely happy that there are people out there much smarter than me, providing a torch in the abyss of darkness I call Excel processing in Python.
-That metaphor really fell apart at the end, didn't it? Let's see some code.
+The fun thing is that it supports cell notes/comments now, but as of this writing it's a 
+little nebulous trying to figure out how to get to this data. Turns out it's not stored as 
+part of the cell, but rather in `sheet.cell_note_map`. Looking at the code all I can say is 
+I am extremely happy that there are people out there much smarter than me, providing a torch 
+in the abyss of darkness I call Excel processing in Python.  That metaphor really fell apart 
+at the end, huh? 
 
-So if you need to get the comments/notes in an excel spreadsheet, it's as easy as this:
+Anyway if you need to get the comments/notes in an excel spreadsheet, it's as easy as this:
 
     import xlrd
     book = xlrd.open_workbook('/path/to/workbook')
@@ -26,4 +28,9 @@ So if you need to get the comments/notes in an excel spreadsheet, it's as easy a
 
 The above will print out the cell's comment/note text, provided it's found. 
 
-Man. It's so delightful coding in python again after a long couple years in PHP. Literally refreshing.
+Man. It's so delightful coding in python again after a long couple years in PHP. Literally 
+refreshing.  
+
+While I know I should link [xlrd](http://pypi.python.org/pypi/xlrd), I also know you're just 
+going to do a `$>pip install -U xlrd` anyway, so my gesture of goodwill here falls flat.
+
